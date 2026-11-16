@@ -1,4 +1,4 @@
-# C-ToolKit
+# C-MenuKit
 
 C-ToolKit is a menu-driven program developed in C that combines several useful mini-programs into one application. It allows users to access different tools through a simple menu system.
 
