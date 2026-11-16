@@ -15,28 +15,28 @@ int main() {
 
     while (again == 1) {
 
-        printf("\n|====== MAIN MENU ======|\n");
-        printf("|1. Pattern Generator   |\n");
-        printf("|2. Pascal's Triangle   |\n");
-        printf("|3. Grade Calculator    |\n");
-        printf("|4. Palindrome Checker  |\n");
-        printf("|5. Exit                | \n");
-        printf("|=======================|\n");
-        printf("Enter your choice: ");
-        scanf("%d", &choice);
-        printf("\n");
+    printf("\n|===== MAIN MENU =====|\n");
+    printf("|1. Pattern Generator |\n");
+    printf("|2. Pascal's Triangle |\n");
+    printf("|3. Grade Calculator |\n");
+    printf("|4. Palindrome Checker|\n");
+    printf("|5. Exit |\n");
+    printf("|=====================|\n");
+    printf("Enter your choice: ");
+    scanf("%d", &choice);
+    printf("\n");
         
         if (choice == 1) {
-            printf("Enter size: ");
-            scanf("%d", &size);
-            printf("1. Right Triangle\n");
-            printf("2. Square\n");
-            printf("3. Pyramid\n");
-            printf("4. Upside-down Triangle\n");
-            printf("5. Christmas Tree\n");
-            printf("Enter shape: ");
-            scanf("%d", &shape);
-            printf("\n");
+        printf("Enter size: ");
+        scanf("%d", &size);
+        printf("1. Right Triangle\n");
+        printf("2. Square\n");
+        printf("3. Isosceles Triangle\n");
+        printf("4. Upside-down Triangle\n");
+        printf("5. Christmas Tree\n");
+        printf("Enter shape: ");
+        scanf("%d", &shape); 
+        printf("\n");
 
             if (shape == 1) {
                 i = 1;
@@ -143,24 +143,24 @@ int main() {
                 row = row + 1;
              }
           }
-        else if (choice == 3) {
+                else if (choice == 3) {
             total = 0;
             i = 1;
             while (i <= 4) {
-                printf("Enter grade %d: ", i);
+                printf("Enter grade %d (1.00 to 5.00): ", i);
                 scanf("%f", &grade);
                 total = total + grade;
                 i = i + 1;
              }
             average = total / 4;
             printf("\nAverage: %.2f\n", average);
-            if (average >= 75) {
+            if (average <= 3.00) {
             printf("PASSED\n");
-            }
+             }
             else {
             printf("FAILED\n");
-            }
-          }
+             }
+           }
         else if (choice == 4) {
             printf("Enter a number: ");
             scanf("%d", &number);
