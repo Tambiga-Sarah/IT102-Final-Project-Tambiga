@@ -18,9 +18,9 @@ int main() {
     printf("\n|===== MAIN MENU =====|\n");
     printf("|1. Pattern Generator |\n");
     printf("|2. Pascal's Triangle |\n");
-    printf("|3. Grade Calculator |\n");
+    printf("|3. Grade Calculator  |\n");
     printf("|4. Palindrome Checker|\n");
-    printf("|5. Exit |\n");
+    printf("|5. Exit              |\n");
     printf("|=====================|\n");
     printf("Enter your choice: ");
     scanf("%d", &choice);
