@@ -32,7 +32,7 @@ int main() {
         printf("1. Right Triangle\n");
         printf("2. Square\n");
         printf("3. Isosceles Triangle\n");
-        printf("4. Upside-down Triangle\n");
+        printf("4. Inverted Right Triangle\n");
         printf("5. Christmas Tree\n");
         printf("Enter shape: ");
         scanf("%d", &shape); 
