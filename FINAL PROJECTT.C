@@ -10,7 +10,8 @@ int main() {
     int row;
     int col;
     int value;      
-    int number, original, reversed, digit;  
+    char word[50];
+    int left, right, same;
     float grade, total, average;    
 
     while (again == 1) {
@@ -162,21 +163,28 @@ int main() {
              }
            }
         else if (choice == 4) {
-            printf("Enter a number: ");
-            scanf("%d", &number);
-            original = number;      
-            reversed = 0;
-            while (number > 0) {
-                digit = number % 10;                
-                reversed = reversed * 10 + digit;   
-                number = number / 10;               
-             }
-            if (original == reversed) {
-                printf("%d is a palindrome.\n", original);
-             }
+            printf("Enter a word: ");
+            scanf("%49s", word);
+            right = 0;
+            while (word[right] != '\0') {
+                right = right + 1;
+            }
+            right = right - 1;
+            left = 0;
+            same = 1;
+            while (left < right) {
+                if (word[left] != word[right]) {
+                    same = 0;
+                }
+                left = left + 1;
+                right = right - 1;
+            }
+            if (same == 1) {
+                printf("%s is a palindrome.\n", word);
+            }
             else {
-                printf("%d is NOT a palindrome.\n", original);
-             }
+                printf("%s is NOT a palindrome.\n", word);
+            }
           }
         else if (choice == 5) {
         again = 0;
