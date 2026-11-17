@@ -2,14 +2,9 @@
 
 int main() {
     int again = 1;         
-    int choice;             
-    int size;  
-    int shape;    
+    int choice, size, shape;           
     int i, j, k, layer;     
-    int rows;
-    int row;
-    int col;
-    int value;      
+    int rows, row, col, value;    
     char word[50];
     int left, right, same;
     float grade, total, average;    
@@ -50,7 +45,7 @@ int main() {
                 printf("\n");
                 i = i + 1;
                 }
-             }
+            }
             else if (shape == 2) {
                 i = 1;
                 while (i <= size) {
@@ -62,7 +57,7 @@ int main() {
                 printf("\n");
                 i = i + 1;
                 }
-             }
+            }
             else if (shape == 3) {
                 i = 1;
                 while (i <= size) {
@@ -79,7 +74,7 @@ int main() {
                 printf("\n");
                 i = i + 1;
                 }
-             }
+            }
             else if (shape == 4) {
                 i = size;
                 while (i >= 1) {
@@ -91,7 +86,7 @@ int main() {
                 printf("\n");
                 i = i - 1;
                 }
-              }
+            }
             else if (shape == 5) {
                 layer = 1;
                 while (layer <= 3) {
@@ -101,15 +96,15 @@ int main() {
                 while (k <= size - i) {
                 printf(" ");
                 k = k + 1;
-                 }
+                }
                 j = 1;
-                 while (j <= 2 * i - 1) {
+                while (j <= 2 * i - 1) {
                 printf("*");
                 j = j + 1;
                 }
                 printf("\n");
                 i = i + 1;
-                 }
+                }
                 layer = layer + 1;
                 }
                 k = 1;
@@ -118,10 +113,10 @@ int main() {
                 k = k + 1;
                 }
                 printf("***\n");
-             } else {
+            } else {
                 printf("Wrong shape number.\n");
-             }
-          }
+            }
+        }
         else if (choice == 2) {
             printf("Enter number of rows: ");
             scanf("%d", &rows);
@@ -132,7 +127,7 @@ int main() {
                 while (k <= (rows - row - 1) * 2) {
                  printf(" ");
                  k = k + 1;
-                 }
+                }
                 value = 1;
                 col = 0;
                 while (col <= row) {
@@ -142,9 +137,9 @@ int main() {
                 }
                 printf("\n");
                 row = row + 1;
-             }
-          }
-                else if (choice == 3) {
+            }
+        }
+            else if (choice == 3) {
             total = 0;
             i = 1;
             while (i <= 4) {
@@ -152,16 +147,16 @@ int main() {
                 scanf("%f", &grade);
                 total = total + grade;
                 i = i + 1;
-             }
+            }
             average = total / 4;
             printf("\nAverage: %.2f\n", average);
             if (average <= 3.00) {
             printf("PASSED\n");
-             }
+            }
             else {
             printf("FAILED\n");
-             }
-           }
+            }
+        }
         else if (choice == 4) {
             printf("Enter a word: ");
             scanf("%49s", word);
@@ -185,7 +180,7 @@ int main() {
             else {
                 printf("%s is NOT a palindrome.\n", word);
             }
-          }
+        }
         else if (choice == 5) {
         again = 0;
         }
@@ -195,8 +190,8 @@ int main() {
         if (choice != 5) {
             printf("\nTry another one? (1 = Yes, 0 = No): ");
             scanf("%d", &again);
-         }
-     }
+        }
+    }
     printf("\nGoodbye!\n");
     return 0;
 }
